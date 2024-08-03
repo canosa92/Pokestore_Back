@@ -1,6 +1,7 @@
 const { initializeApp } = require('firebase/app');
 const admin = require('firebase-admin');
-const serviceAccount = require('./poke-ecommerce-firebase-adminsdk-5rhqo-9a8241c1ea.json');
+require('dotenv').config();
+const serviceAccount =  JSON.parse(process.env.FIREBASE_CREDENTIALS);
 
 const firebaseConfig = {
   apiKey: process.env.FB_APIKEY,
