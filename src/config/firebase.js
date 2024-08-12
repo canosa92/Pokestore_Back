@@ -1,7 +1,7 @@
 const { initializeApp } = require('firebase/app');
 const admin = require('firebase-admin');
 require('dotenv').config();
-const serviceAccount =  JSON.parse(process.env.FIREBASE_CREDENTIALS);
+const firebaseCredentials =  JSON.parse(process.env.FIREBASE_CREDENTIALS);
 
 const firebaseConfig = {
   apiKey: process.env.FB_APIKEY,
@@ -17,7 +17,7 @@ const firebaseapp = initializeApp(firebaseConfig);
 
 // Inicializa Firebase Admin
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(firebaseCredentials),
   databaseURL: "https://poke-ecommerce-default-rtdb.europe-west1.firebasedatabase.app"
 });
 
