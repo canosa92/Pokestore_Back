@@ -24,32 +24,30 @@ El backend de la aplicacion 'Pokestore' posee la siguiente estructura de archivo
 ├── src
 │   ├── config
 │   │   ├── db.js
-│   │   └── firebase.js 
+│   │   ├── firebase.js 
+|   |   └── auth.js
 │   ├── controllers
-│   │   ├── orderController.js 
+│   │   ├── CommentController.js 
 │   │   ├── productController.js
 │   │   └── userController.js
 │   ├── middlewares 
 │   │   └── authentication.js
 │   ├── models
-│   │   ├── OrderModel.js 
 │   │   ├── ProductModel.js 
 │   │   └── UserModel.js
 │   ├── routes
-│   │   ├── orderRoutes.js
+│   │   ├── Commentroutes.js
 │   │   ├── productRoutes.js
-│   │   └── userRoutes.js 
+│   │   └── usersRoutes.js 
 │   ├── test 
-│   │   ├── orderController.test.js
 │   │   ├── productController.test.js
 │   │   └── userController.test.js 
 │   └── utils 
-│       ├── axiosItems.js
 │       └── axiosPoke.js
 ├── .env
 ├── .gitignore   
 ├── package.json
-└── serve.js
+└── index.js
 
 ```
 
@@ -59,11 +57,9 @@ El backend de la aplicacion 'Pokestore' posee la siguiente estructura de archivo
 
 - `config/db.js`: Archivo que establece la conexion a la base de datos MongoDB utilizando Mongoose. Además, utiliza `dotenv` para usar las variables de entorno desde un archivo `.env`.
 - `config/firebase.js`: Archivo que contiene la configuración de firebase. Inicia la conexión con firebase.
-- `controllers/orderController.js`: Archivo que contiene un controlador de API para manejar las solicitudes de los pedidos de productos. Utiliza el modelo `OrderModel.js` para interactuar con la base de datos y devuelve las respuestas en formato json.
 - `controllers/productController.js`: Archivo que contiene la lógica para manejar las solicitudes CRUD de los productos. Devuelve las respuestas en formato json.
 - `controllers/userController.js`: Archivo que contiene un controlador que maneja el registro, inicio de sesión, cierre de sesión y actualizacion de informacion de usuarios utilizando Firebase Authentication. El controlador utiliza la instancia de autenticación de Firebase `auth` inicializada previamente.
 - `middlewares/authentication.js`: Archivo que contiene el middleware para comprobar si el usuario está autenticado utilizando Firebase Authentication. El middleware comprueba si hay un usuario autenticado utilizando la función `onAuthStateChanged` proporcionada por Firebase.
-- `models/OrderModel.js`: Archivo que contiene la definición del esquema del pedido de productos utilizando Mongoose.
 - `models/ProductModel.js`: Archivo que contiene la definición del esquema del productos utilizando Mongoose.
 - `models/UserModel.js`: Archivo que contiene la definición del esquema del usuario utilizando Mongoose.
 - `routes/apiRoutes.js`: Archivo que contiene la definición de las rutas para la API. Este llama a los métodos del controlador apiController.js.
@@ -156,5 +152,6 @@ La aplicación 'Pokestore' esta desarrollada en Node.js. Para ello se han utiliz
 
 -`jest`: Es una biblioteca de Node.js para crear, ejecutar y estructurar pruebas o test. En nuestro caso se han realizado los test a las funciones de la aplicación.
 
--`fl0`: Aunque no es una dependencia utilizamos el implementador de aplicaciones backend y bases de datos llamado `fl0` en el cual hemos creado nuestro proyecto y lo hemos desplegado.#   P o k e s t o r e _ B a c k  
+-`fl0`: Aunque no es una dependencia utilizamos el implementador de aplicaciones backend y bases de datos llamado `fl0` en el cual hemos creado nuestro proyecto y lo hemos desplegado.#   P o k e s t o r e _ B a c k 
+ 
  
