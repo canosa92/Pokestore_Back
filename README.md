@@ -135,27 +135,18 @@ El backend de la aplicacion 'Pokestore' posee la siguiente estructura de archivo
 
 ### Cliente no registrado
 
-- `GET /products`: Devuelve todos los productos.
-- `GET /products/:id`: Devuelve un producto por su ID.
-- `GET /products/nombre/:nombre`: Devuelve un producto por su nombre.
-
-### Cliente registrado
-
-Incluye todos los endpoints del cliente no registrado, más:
-
-- `POST /orders`: Crea una orden de compra.
-- `PUT /orders/id/:_id`: Modifica el estado del pedido.
-- `POST /products/:id/comentario`: Inserta un comentario en el producto.
-- `POST /products/:id/like`: Añade un "me gusta" a un producto.
+- `GET /productos`: Devuelve todos los productos.
+- `GET /productos/:id`: Devuelve un producto por su ID.
+- `GET /productos/nombre/:nombre`: Devuelve un producto por su nombre.
 
 ### Administradores
 
 Incluye todos los endpoints anteriores, más:
 
-- `PUT /products/:id/editar`: Edita un producto.
-- `POST /products/crear`: Crea un nuevo producto.
-- `DELETE /products/:id`: Elimina un producto.
-- `DELETE /users/:id`: Elimina un usuario.
+- `PUT /productos/:id/editar`: Edita un producto.
+- `POST /productos/crear`: Crea un nuevo producto.
+- `DELETE /productos/:id`: Elimina un producto.
+- 
 ## Contribuir
 
 Si deseas contribuir al proyecto, por favor:
