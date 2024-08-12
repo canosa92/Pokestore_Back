@@ -166,6 +166,11 @@ Si deseas contribuir al proyecto, por favor:
 4. Haz push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
+## Despliegue
+
+El backend de PokéStore está desplegado y accesible en:
+
+https://pokestore-back-5oqh.onrender.com
 ## Soporte
 
 Si tienes alguna pregunta o problema, por favor abre un issue en el repositorio de GitHub.
